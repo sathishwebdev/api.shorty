@@ -64,7 +64,7 @@ exports.registerUser = async (req, res) => {
       to: user.email,
       subject : "Verify Account | Shorty",
       html : `<div class="text-center">
-          <h1>Verify Your Account</h1><small>${user.name}</small><br/><p>test mail</p><a class="btn btn-primary" href="http://localhost:3000/${user.id}/verify/k/?key=${user.VT_KEY}" target='_blank' >Click here to verify your account</a>
+          <h1>Verify Your Account</h1><small>${user.name}</small><br/><p>test mail</p><a class="btn btn-primary" href="https://shorty-sk.netlify.app/${user.id}/verify/k/?key=${user.VT_KEY}" target='_blank' >Click here to verify your account</a>
       </div>` 
   }
 
@@ -178,7 +178,7 @@ exports.forgetPassword = async(req, res) =>{
       let mailInfo = {
         subject : "Change Your Password | SHORTY",
         message : `<div class="text-center">
-        <h1>Change Your Password</h1><small>${user.name}</small><br/><p>test mail</p><a class="btn btn-primary" href="http://localhost:3000/${user._id}/changepassword/k/?key=${FPTKey}" target='_blank' >Click here to change Password</a>
+        <h1>Change Your Password</h1><small>${user.name}</small><br/><p>test mail</p><a class="btn btn-primary" href="https://shorty-sk.netlify.app/${user._id}/changepassword/k/?key=${FPTKey}" target='_blank' >Click here to change Password</a>
     </div>`
       }
 
